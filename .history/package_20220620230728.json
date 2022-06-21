@@ -1,0 +1,20 @@
+{
+  "name": "referencia-web",
+  "version": "1.0.0",
+  "description": "Referencia web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LynxPardelle/referencia-web.git"
+  },
+  "keywords": [],
+  "author": "Lynx Pardelle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LynxPardelle/referencia-web/issues"
+  },
+  "homepage": "https://github.com/LynxPardelle/referencia-web#readme"
+}
