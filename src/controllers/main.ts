@@ -7,9 +7,11 @@ import fs from "fs";
 import path from "path";
 import jwt from "../lib/jwt";
 import secret from "../keys";
+import populate from "../lib/populate";
 
 /* Models */
 import MainModel, { Main as MainType } from "../models/main";
+import FileModel, { File as FileType } from "../models/file";
 import MainSectionModel, {
   MainSection as MainSectionType,
 } from "../models/main-section";
@@ -57,6 +59,9 @@ const controller = {
         linkColor,
         bgColor,
       });
+      const mainSections = await MainSectionModel.find()
+        .populate(populate.main_section)
+        .sort("order");
     } catch (e: any) {
       console.log(e);
       return res.status(nErr).send({
